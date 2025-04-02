@@ -1,0 +1,24 @@
+# Terraform state
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+*.tfplan
+
+# Environment overrides
+*.tfvars
+*.tfvars.json
+*.backup
+
+# Sensitive files
+.env
+.env.*
+
+# Editor/IDE files
+.vscode/
+.idea/
+.DS_Store
+
+# OS-specific
+Thumbs.db

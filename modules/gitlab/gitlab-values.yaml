@@ -1,0 +1,29 @@
+global:
+  externalUrl: "http://gitlab.local"
+  hosts:
+    domain: "local"
+
+# In a Minikube environment, you may prefer NodePort services.
+gitlab:
+  webservice:
+    service:
+      type: NodePort
+    ingress:
+      enabled: false
+
+# Use the bundled PostgreSQL and Redis instances.
+postgresql:
+  install: true
+redis:
+  install: true
+
+# Persistence settings for data durability.
+persistence:
+  enabled: true
+  storageClass: "standard"  # This should match your Minikube storage class.
+  accessMode: ReadWriteOnce
+  size: 20Gi
+
+# Optional: Configure SMTP for email notifications if needed.
+smtp:
+  enabled: false
