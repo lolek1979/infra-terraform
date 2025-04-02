@@ -115,12 +115,15 @@ You may configure `backend.tf` to use remote state (e.g., AWS S3, Terraform Clou
 
 ---
 ## RUN
-
+```bash
 terraform init       # if not already initialized
 terraform plan       # review what will be created
 terraform apply      # deploy just ArgoCD
+```
 
 # OR
 
+```bash
 terraform plan -target=module.argocd
 terraform apply -target=module.argocd
+```
